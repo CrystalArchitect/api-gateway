@@ -33,7 +33,9 @@ This project explores whether a lightweight API gateway/proxy can provide a usef
 
 ## Core Goals
 
-### 1. Security Consolidation
+### 1. Modern approach to handling LLMs in an efficient manner
+
+### 2. Security Consolidation
 
 Provide a controlled boundary between internal clients and Vendor APIs.
 
@@ -48,7 +50,7 @@ Potential responsibilities include:
 
 **Important:** This project should never contain real API credentials, tokens, secrets, or production account information.
 
-### 2. Rate-Limit Management
+### 3. Rate-Limit Management
 
 Explore ways to make upstream API consumption more predictable.
 
@@ -64,7 +66,7 @@ Potential capabilities:
 
 The objective is not to magically eliminate upstream limits. The objective is to use them intelligently and avoid unnecessary consumption.
 
-### 3. Response Caching
+### 4. Response Caching
 
 Cache safe-to-cache Vendor API responses so repeated requests can potentially be served locally.
 
@@ -83,7 +85,7 @@ The initial design will investigate:
 
 PostgreSQL JSONB is an explicit candidate because the original prototype used PostgreSQL to store structured API responses. It is **not yet the selected solution**.
 
-### 4. Cost and Resource Awareness
+### 5. Cost and Resource Awareness
 
 The gateway should make API consumption measurable.
 
@@ -101,7 +103,7 @@ Potential metrics include:
 
 The project will distinguish between **actual provider costs** and **resource/cost proxies** rather than claiming that every avoided request has a direct dollar value.
 
-### 5. Developer-Friendly API Access
+### 6. Developer-Friendly API Access
 
 The gateway should be useful to developers with different tooling preferences.
 
@@ -124,7 +126,7 @@ The first conceptual architecture is:
 ```text
 +-------------------+
 | Developer / Tool  |
-| CI / Script / App  |
+| CI / Script / App |
 +---------+---------+
           |
           | Internal API request
