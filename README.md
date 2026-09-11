@@ -33,7 +33,7 @@ This project explores whether a lightweight API gateway/proxy can provide a usef
 
 ## Core Goals
 
-### 1. Modern approach to handling LLMs in an efficient manner
+### 1. LLM Integration, Cost and Optimization
 - Track prompt and completion tokens per client to monitor and control upstream LLM vendor spend.
 - Passthrough Server-Sent Events (SSE) and token-streaming responses without buffering or extra latency.
 - Cache exact and semantic prompt results to avoid redundant, expensive model calls.
