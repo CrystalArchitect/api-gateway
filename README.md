@@ -34,6 +34,12 @@ This project explores whether a lightweight API gateway/proxy can provide a usef
 ## Core Goals
 
 ### 1. Modern approach to handling LLMs in an efficient manner
+- Track prompt and completion tokens per client to monitor and control upstream LLM vendor spend.
+- Passthrough Server-Sent Events (SSE) and token-streaming responses without buffering or extra latency.
+- Cache exact and semantic prompt results to avoid redundant, expensive model calls.
+- Unify request and response formats across OpenAI, Anthropic, and other vendors to make swapping models seamless.
+- Route requests to secondary models or providers automatically when primary endpoints hit rate limits or downtime.
+- Intercept requests to redact sensitive PII and enforce policy constraints before reaching upstream models.
 
 ### 2. Security Consolidation
 
