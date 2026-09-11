@@ -525,7 +525,7 @@ The author intends to permit others to:
 
 The repository will use a permissive open-source license. **MIT is currently the leading candidate**, with BSD-2-Clause and BSD-3-Clause also under consideration.
 
-The final license should be selected deliberately before the project reaches a stable public release.
+This project is officially licensed under MIT.
 
 ## Current Working Name
 
